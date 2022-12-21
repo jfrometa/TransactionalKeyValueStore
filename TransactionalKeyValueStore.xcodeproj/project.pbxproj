@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B378936A295354DC00AD876F /* TransactionalKeyValueStoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3789369295354DC00AD876F /* TransactionalKeyValueStoreApp.swift */; };
+		B378936C295354DC00AD876F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378936B295354DC00AD876F /* ContentView.swift */; };
+		B378936E295354DE00AD876F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B378936D295354DE00AD876F /* Assets.xcassets */; };
+		B3789371295354DE00AD876F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3789370295354DE00AD876F /* Preview Assets.xcassets */; };
+		B378937B295354DF00AD876F /* TransactionalKeyValueStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378937A295354DF00AD876F /* TransactionalKeyValueStoreTests.swift */; };
+		B3789385295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3789384295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift */; };
+		B3789387295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3789386295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3789377295354DF00AD876F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B378935E295354DC00AD876F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3789365295354DC00AD876F;
+			remoteInfo = TransactionalKeyValueStore;
+		};
+		B3789381295354DF00AD876F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B378935E295354DC00AD876F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3789365295354DC00AD876F;
+			remoteInfo = TransactionalKeyValueStore;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B3789366295354DC00AD876F /* TransactionalKeyValueStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransactionalKeyValueStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3789369295354DC00AD876F /* TransactionalKeyValueStoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionalKeyValueStoreApp.swift; sourceTree = "<group>"; };
+		B378936B295354DC00AD876F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B378936D295354DE00AD876F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3789370295354DE00AD876F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B3789376295354DF00AD876F /* TransactionalKeyValueStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionalKeyValueStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B378937A295354DF00AD876F /* TransactionalKeyValueStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionalKeyValueStoreTests.swift; sourceTree = "<group>"; };
+		B3789380295354DF00AD876F /* TransactionalKeyValueStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TransactionalKeyValueStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3789384295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionalKeyValueStoreUITests.swift; sourceTree = "<group>"; };
+		B3789386295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionalKeyValueStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3789363295354DC00AD876F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3789373295354DF00AD876F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B378937D295354DF00AD876F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B378935D295354DC00AD876F = {
+			isa = PBXGroup;
+			children = (
+				B3789368295354DC00AD876F /* TransactionalKeyValueStore */,
+				B3789379295354DF00AD876F /* TransactionalKeyValueStoreTests */,
+				B3789383295354DF00AD876F /* TransactionalKeyValueStoreUITests */,
+				B3789367295354DC00AD876F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3789367295354DC00AD876F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3789366295354DC00AD876F /* TransactionalKeyValueStore.app */,
+				B3789376295354DF00AD876F /* TransactionalKeyValueStoreTests.xctest */,
+				B3789380295354DF00AD876F /* TransactionalKeyValueStoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3789368295354DC00AD876F /* TransactionalKeyValueStore */ = {
+			isa = PBXGroup;
+			children = (
+				B3789369295354DC00AD876F /* TransactionalKeyValueStoreApp.swift */,
+				B378936B295354DC00AD876F /* ContentView.swift */,
+				B378936D295354DE00AD876F /* Assets.xcassets */,
+				B378936F295354DE00AD876F /* Preview Content */,
+			);
+			path = TransactionalKeyValueStore;
+			sourceTree = "<group>";
+		};
+		B378936F295354DE00AD876F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B3789370295354DE00AD876F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B3789379295354DF00AD876F /* TransactionalKeyValueStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				B378937A295354DF00AD876F /* TransactionalKeyValueStoreTests.swift */,
+			);
+			path = TransactionalKeyValueStoreTests;
+			sourceTree = "<group>";
+		};
+		B3789383295354DF00AD876F /* TransactionalKeyValueStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B3789384295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift */,
+				B3789386295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift */,
+			);
+			path = TransactionalKeyValueStoreUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3789365295354DC00AD876F /* TransactionalKeyValueStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B378938A295354DF00AD876F /* Build configuration list for PBXNativeTarget "TransactionalKeyValueStore" */;
+			buildPhases = (
+				B3789362295354DC00AD876F /* Sources */,
+				B3789363295354DC00AD876F /* Frameworks */,
+				B3789364295354DC00AD876F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransactionalKeyValueStore;
+			productName = TransactionalKeyValueStore;
+			productReference = B3789366295354DC00AD876F /* TransactionalKeyValueStore.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3789375295354DF00AD876F /* TransactionalKeyValueStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B378938D295354DF00AD876F /* Build configuration list for PBXNativeTarget "TransactionalKeyValueStoreTests" */;
+			buildPhases = (
+				B3789372295354DF00AD876F /* Sources */,
+				B3789373295354DF00AD876F /* Frameworks */,
+				B3789374295354DF00AD876F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3789378295354DF00AD876F /* PBXTargetDependency */,
+			);
+			name = TransactionalKeyValueStoreTests;
+			productName = TransactionalKeyValueStoreTests;
+			productReference = B3789376295354DF00AD876F /* TransactionalKeyValueStoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B378937F295354DF00AD876F /* TransactionalKeyValueStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3789390295354DF00AD876F /* Build configuration list for PBXNativeTarget "TransactionalKeyValueStoreUITests" */;
+			buildPhases = (
+				B378937C295354DF00AD876F /* Sources */,
+				B378937D295354DF00AD876F /* Frameworks */,
+				B378937E295354DF00AD876F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3789382295354DF00AD876F /* PBXTargetDependency */,
+			);
+			name = TransactionalKeyValueStoreUITests;
+			productName = TransactionalKeyValueStoreUITests;
+			productReference = B3789380295354DF00AD876F /* TransactionalKeyValueStoreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B378935E295354DC00AD876F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					B3789365295354DC00AD876F = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					B3789375295354DF00AD876F = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B3789365295354DC00AD876F;
+					};
+					B378937F295354DF00AD876F = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = B3789365295354DC00AD876F;
+					};
+				};
+			};
+			buildConfigurationList = B3789361295354DC00AD876F /* Build configuration list for PBXProject "TransactionalKeyValueStore" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B378935D295354DC00AD876F;
+			productRefGroup = B3789367295354DC00AD876F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3789365295354DC00AD876F /* TransactionalKeyValueStore */,
+				B3789375295354DF00AD876F /* TransactionalKeyValueStoreTests */,
+				B378937F295354DF00AD876F /* TransactionalKeyValueStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3789364295354DC00AD876F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3789371295354DE00AD876F /* Preview Assets.xcassets in Resources */,
+				B378936E295354DE00AD876F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3789374295354DF00AD876F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B378937E295354DF00AD876F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3789362295354DC00AD876F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B378936C295354DC00AD876F /* ContentView.swift in Sources */,
+				B378936A295354DC00AD876F /* TransactionalKeyValueStoreApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3789372295354DF00AD876F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B378937B295354DF00AD876F /* TransactionalKeyValueStoreTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B378937C295354DF00AD876F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3789387295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift in Sources */,
+				B3789385295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3789378295354DF00AD876F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3789365295354DC00AD876F /* TransactionalKeyValueStore */;
+			targetProxy = B3789377295354DF00AD876F /* PBXContainerItemProxy */;
+		};
+		B3789382295354DF00AD876F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3789365295354DC00AD876F /* TransactionalKeyValueStore */;
+			targetProxy = B3789381295354DF00AD876F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B3789388295354DF00AD876F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B3789389295354DF00AD876F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B378938B295354DF00AD876F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TransactionalKeyValueStore/Preview Content\"";
+				DEVELOPMENT_TEAM = XFT8TT4H8Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aimbotjose.TransactionalKeyValueStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B378938C295354DF00AD876F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TransactionalKeyValueStore/Preview Content\"";
+				DEVELOPMENT_TEAM = XFT8TT4H8Z;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aimbotjose.TransactionalKeyValueStore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B378938E295354DF00AD876F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFT8TT4H8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aimbotjose.TransactionalKeyValueStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionalKeyValueStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TransactionalKeyValueStore";
+			};
+			name = Debug;
+		};
+		B378938F295354DF00AD876F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFT8TT4H8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aimbotjose.TransactionalKeyValueStoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TransactionalKeyValueStore.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TransactionalKeyValueStore";
+			};
+			name = Release;
+		};
+		B3789391295354DF00AD876F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFT8TT4H8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aimbotjose.TransactionalKeyValueStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TransactionalKeyValueStore;
+			};
+			name = Debug;
+		};
+		B3789392295354DF00AD876F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XFT8TT4H8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = aimbotjose.TransactionalKeyValueStoreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TransactionalKeyValueStore;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3789361295354DC00AD876F /* Build configuration list for PBXProject "TransactionalKeyValueStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3789388295354DF00AD876F /* Debug */,
+				B3789389295354DF00AD876F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B378938A295354DF00AD876F /* Build configuration list for PBXNativeTarget "TransactionalKeyValueStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B378938B295354DF00AD876F /* Debug */,
+				B378938C295354DF00AD876F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B378938D295354DF00AD876F /* Build configuration list for PBXNativeTarget "TransactionalKeyValueStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B378938E295354DF00AD876F /* Debug */,
+				B378938F295354DF00AD876F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3789390295354DF00AD876F /* Build configuration list for PBXNativeTarget "TransactionalKeyValueStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3789391295354DF00AD876F /* Debug */,
+				B3789392295354DF00AD876F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B378935E295354DC00AD876F /* Project object */;
+}
