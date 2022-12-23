@@ -15,7 +15,8 @@ class TrasactionsViewModel: ViewModelProtocol {
     @Published var transactions = TransactionalKeyValue()
     @Published var operation = Operation(key: "", value: "", type: .SET)
     @Published var showingAlert = false
-    @Published var result = ""
+    @Published var showingErrorAlert = false
+    @Published var lastOperationDetails = ""
         
     init() {
         self.beginTransactions()
@@ -51,7 +52,7 @@ class TrasactionsViewModel: ViewModelProtocol {
         input.sink { event in
             switch event {
             case .willExecuteTransaction:
-                self.executeCommand()
+                self.execute()
             }
         }
         .store(in: &cancellables)
@@ -59,8 +60,7 @@ class TrasactionsViewModel: ViewModelProtocol {
         return output.eraseToAnyPublisher()
     }
        
-    // Method to execute the command entered by the user
-    private func executeCommand() {
+    private func execute() {
         switch self.operation.type {
         case .SET:
             self.set()
@@ -77,8 +77,7 @@ class TrasactionsViewModel: ViewModelProtocol {
         case .ROLLBACK:
             self.rollBack()
         default:
-            output.send(.transactionFailed(NSError(domain: "transactions", code: 500)))
-            result = "Invalid command"
+            self.errorWithDefault()
         }
     }
 }
@@ -87,42 +86,63 @@ class TrasactionsViewModel: ViewModelProtocol {
 private extension TrasactionsViewModel {
     func beginTransactions() {
         transactions.begin()
-        result = OperationType.BEGIN.rawValue
+        lastOperationDetails = OperationType.BEGIN.rawValue
+        self.output.send(.transactionSucceded(operation.key))
     }
     
     func rollBack() {
         transactions.rollback()
-        result =  OperationType.ROLLBACK.rawValue
+        lastOperationDetails =  OperationType.ROLLBACK.rawValue
+        self.output.send(.transactionSucceded(operation.key))
     }
     
     func commit() {
         transactions.commit()
-        result = OperationType.COMMIT.rawValue
+        lastOperationDetails = OperationType.COMMIT.rawValue
+        self.output.send(.transactionSucceded(operation.key))
     }
     
     func count() {
+        if operation.value.isEmpty {
+            output.send(.transactionFailed(NSError(domain: "cant count!", code: 504)))
+            return
+        }
+        
         let count = transactions.count(value: operation.value)
-        result = "key: \(operation.value) count is: \(count)"
+        lastOperationDetails = "key: \(operation.value) count is: \(count)"
+        
+        self.output.send(.transactionSucceded(operation.key))
     }
     
     func delete() {
         transactions.delete(key: operation.key)
-        result = "deleted key: \(operation.key)"
+        lastOperationDetails = "deleted key: \(operation.key)"
+        self.output.send(.transactionSucceded(operation.key))
     }
     
     func get() {
         if let value = transactions.get(key: operation.key) {
-          result = "get: \(operation.key) is: \(value)"
+          lastOperationDetails = "get: \(operation.key) is: \(value)"
+          self.output.send(.transactionSucceded(operation.key))
         } else {
-          result = "Key not set"
-          output.send(.transactionFailed(NSError(domain: "invalid request", code: 500)))
+          lastOperationDetails = "Key not set"
+          self.output.send(.transactionFailed(NSError(domain: "invalid request", code: 501)))
         }
     }
     
     func set() {
-        if !operation.key.isEmpty && !operation.value.isEmpty {
-            transactions.set(key: operation.key, value: operation.value)
-            result = "set: \(operation.key) \(operation.value)"
+        if operation.key.isEmpty || operation.value.isEmpty {
+            output.send(.transactionFailed(NSError(domain: "missing input field", code: 502)))
+            return
         }
+        
+        transactions.set(key: operation.key, value: operation.value)
+        lastOperationDetails = "set: \(operation.key) \(operation.value)"
+        self.output.send(.transactionSucceded(operation.key))
+    }
+    
+    func errorWithDefault() {
+        output.send(.transactionFailed(NSError(domain: "platform error", code: 500)))
+        lastOperationDetails = "Invalid command"
     }
 }

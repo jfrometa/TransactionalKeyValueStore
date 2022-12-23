@@ -6,31 +6,92 @@
 //
 
 import XCTest
+import Combine
 @testable import TransactionalKeyValueStore
 
 final class TransactionalKeyValueStoreTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    func testExecuteCommand() {
+           let viewModel = TrasactionsViewModel()
+           viewModel.operation = .init(key: "key1", value: "value1", type: .SET)
+        
+           let input: PassthroughSubject<TrasactionsViewModel.Input, Never> = .init()
+        
+           let cancellable = viewModel
+            .transform(input: input.eraseToAnyPublisher())
+            .sink(receiveCompletion: { (completion) in
+               switch completion {
+               case .failure(let error):
+                   XCTFail("Unexpected error: \(error)")
+               case .finished:
+                   break
+               }
+                
+           }) { (output) in
+               switch output {
+               case .transactionFailed(let error):
+                   XCTFail("Unexpected error: \(error)")
+               case .transactionSucceded(let data):
+                   XCTAssertEqual(data, "key1")
+               }
+           }
+        
+           input.send(.willExecuteTransaction)
+           cancellable.cancel()
+       }
+    
+    func testNestedTransactions() {
+         let viewModel = TrasactionsViewModel()
+         let input: PassthroughSubject<TrasactionsViewModel.Input, Never> = .init()
+         let cancellable = viewModel
+            .transform(input: input.eraseToAnyPublisher())
+            .sink(receiveCompletion: { (completion) in
+             switch completion {
+             case .failure(let error):
+                 XCTFail("Unexpected error: \(error)")
+             case .finished:
+                 break
+             }
+                
+         }) { (output) in
+             switch output {
+             case .transactionFailed(let error):
+                 XCTFail("Unexpected error: \(error)")
+             case .transactionSucceded(let data):
+                 print("key: \(data)")
+             }
+         }
+       
+        viewModel.operation = .init(key: "foo", value: "123", type: .SET)
+        input.send(.willExecuteTransaction)
+        viewModel.operation = .init(key: "bar", value: "456", type: .SET)
+        input.send(.willExecuteTransaction)
+        viewModel.operation = .init(key: "", value: "", type: .BEGIN)
+        input.send(.willExecuteTransaction)
+        viewModel.operation = .init(key: "foo", value: "456", type: .SET)
+        input.send(.willExecuteTransaction)
+        viewModel.operation = .init(key: "", value: "", type: .BEGIN)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "", value: "456", type: .COUNT)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "foo", value: "", type: .GET)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "foo", value: "789", type: .SET)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "foo", value: "", type: .GET)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "", value: "", type: .ROLLBACK)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "foo", value: "", type: .GET)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "foo", value: "", type: .DELETE)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "", value: "", type: .ROLLBACK)
+        input.send(.willExecuteTransaction)
+         viewModel.operation = .init(key: "foo", value: "", type: .GET)
+        input.send(.willExecuteTransaction)
+        
+        XCTAssertEqual(viewModel.transactions.get(key: "foo"), "123")
+        XCTAssertEqual(viewModel.transactions.get(key: "bar"), "456")
+        cancellable.cancel()
+     }
 }

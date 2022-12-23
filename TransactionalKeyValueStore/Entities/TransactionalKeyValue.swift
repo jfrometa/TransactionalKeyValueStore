@@ -28,7 +28,6 @@ class TransactionalKeyValue {
     }
     
     func begin() {
-        // Push a copy of the current store to the transaction stack
         let copy = store
         transactionStack.append(copy)
     }

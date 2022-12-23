@@ -10,21 +10,27 @@ import SwiftUI
 import Combine
 
 struct TransactionView: View, ViewProtocol {
+    private let input: Input<TrasactionsViewModel.Input> = .init()
+    private var cancellables: Set<AnyCancellable> = .init()
+    
+    enum FormField { case key, value }
+    
     @StateObject private var viewModel: TrasactionsViewModel
-    
-    private let input: Input<TrasactionsViewModel.Input>
-    private let output: Output<TrasactionsViewModel.Output>
-    
     @FocusState private var focusedField: FormField?
-    enum FormField {
-      case key, value
-    }
 
-    
     init(viewModel: TrasactionsViewModel = TrasactionsViewModel()) {
         _viewModel = StateObject(wrappedValue: viewModel)
-        input = .init()
-        output = viewModel.transform(input: input.eraseToAnyPublisher())
+        
+        viewModel.transform(input: input.eraseToAnyPublisher())
+            .sink { output in
+                switch output {
+                    
+                case .transactionFailed(_):
+                    viewModel.showingErrorAlert = true
+                case .transactionSucceded(_):
+                    viewModel.operation = Operation(key: "", value: "", type: .SET)
+                }
+            }.store(in: &cancellables)
     }
 
     var body: some View {
@@ -69,7 +75,7 @@ struct TransactionView: View, ViewProtocol {
                         }
 
                         Section(header: Text("Executed")) {
-                            Text("\(viewModel.result)")
+                            Text("\(viewModel.lastOperationDetails)")
                         }
                         
                         if !viewModel.transactions.store.isEmpty {
@@ -102,6 +108,13 @@ struct TransactionView: View, ViewProtocol {
                             viewModel.showingAlert = false
                             input.send(.willExecuteTransaction)
                         })
+                    )
+                }
+                .alert(isPresented:  $viewModel.showingErrorAlert) {
+                    Alert(
+                        title: Text("Upss!"),
+                        message: Text("Check your inputs!"),
+                        dismissButton: .default(Text("OK"))
                     )
                 }
                 .frame(minWidth: 0,

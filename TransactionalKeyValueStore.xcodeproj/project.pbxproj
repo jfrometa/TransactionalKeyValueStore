@@ -15,7 +15,6 @@
 		B3789385295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3789384295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift */; };
 		B3789387295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3789386295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift */; };
 		B37893952954BF5D00AD876F /* TransactionalKeyValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37893942954BF5D00AD876F /* TransactionalKeyValue.swift */; };
-		B37893972954BF8800AD876F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37893962954BF8800AD876F /* Transaction.swift */; };
 		B378939A2954BFA500AD876F /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37893992954BFA500AD876F /* Operation.swift */; };
 		B378939E2954C2F700AD876F /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B378939D2954C2F700AD876F /* TransactionViewModel.swift */; };
 		B37893A12954C3FB00AD876F /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37893A02954C3FB00AD876F /* ViewModelProtocol.swift */; };
@@ -51,7 +50,6 @@
 		B3789384295354DF00AD876F /* TransactionalKeyValueStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionalKeyValueStoreUITests.swift; sourceTree = "<group>"; };
 		B3789386295354DF00AD876F /* TransactionalKeyValueStoreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionalKeyValueStoreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B37893942954BF5D00AD876F /* TransactionalKeyValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionalKeyValue.swift; sourceTree = "<group>"; };
-		B37893962954BF8800AD876F /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		B37893992954BFA500AD876F /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 		B378939D2954C2F700AD876F /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		B37893A02954C3FB00AD876F /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				B37893942954BF5D00AD876F /* TransactionalKeyValue.swift */,
-				B37893962954BF8800AD876F /* Transaction.swift */,
 				B37893992954BFA500AD876F /* Operation.swift */,
 			);
 			path = Entities;
@@ -310,7 +307,6 @@
 				B37893952954BF5D00AD876F /* TransactionalKeyValue.swift in Sources */,
 				B378936C295354DC00AD876F /* TransactionView.swift in Sources */,
 				B37893A32954D10100AD876F /* ViewProtocol.swift in Sources */,
-				B37893972954BF8800AD876F /* Transaction.swift in Sources */,
 				B378939A2954BFA500AD876F /* Operation.swift in Sources */,
 				B37893A12954C3FB00AD876F /* ViewModelProtocol.swift in Sources */,
 				B378939E2954C2F700AD876F /* TransactionViewModel.swift in Sources */,
