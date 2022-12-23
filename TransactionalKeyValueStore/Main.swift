@@ -8,10 +8,12 @@
 import SwiftUI
 
 @main
-struct TransactionalKeyValueStoreApp: App {
+struct Main: App {
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TransactionView()
+                .environment(\.colorScheme, .light)
         }
     }
 }
