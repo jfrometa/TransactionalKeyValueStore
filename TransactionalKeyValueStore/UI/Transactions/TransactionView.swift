@@ -24,9 +24,10 @@ struct TransactionView: View, ViewProtocol {
         viewModel.transform(input: input.eraseToAnyPublisher())
             .sink { output in
                 switch output {
-                    
                 case .transactionFailed(_):
                     viewModel.showingErrorAlert = true
+                    viewModel.showingAlert = true
+                
                 case .transactionSucceded(_):
                     viewModel.operation = Operation(key: "", value: "", type: .SET)
                 }
@@ -98,24 +99,7 @@ struct TransactionView: View, ViewProtocol {
                 .navigationTitle(Text("Transactions"))
                 .ignoresSafeArea(.keyboard)
                 .alert(isPresented: $viewModel.showingAlert) {
-                    Alert(
-                        title: Text("Execute \(viewModel.operation.type.rawValue) transaction"),
-                        message: Text("Once done, this can't be undone!"),
-                        primaryButton: .cancel( Text("Cancel"), action: {
-                            viewModel.showingAlert = false
-                        }),
-                        secondaryButton: .default(Text("OK"), action: {
-                            viewModel.showingAlert = false
-                            input.send(.willExecuteTransaction)
-                        })
-                    )
-                }
-                .alert(isPresented:  $viewModel.showingErrorAlert) {
-                    Alert(
-                        title: Text("Upss!"),
-                        message: Text("Check your inputs!"),
-                        dismissButton: .default(Text("OK"))
-                    )
+                    self.showAlert()
                 }
                 .frame(minWidth: 0,
                        maxWidth: .infinity,
@@ -125,8 +109,33 @@ struct TransactionView: View, ViewProtocol {
                 )
         }
     }
+
+}
+
+private extension TransactionView {
+     func showAlert() -> Alert {
+        viewModel.showingErrorAlert ?
+        Alert(
+           title: Text("Upss!"),
+           message: Text("Check your inputs!"),
+           dismissButton: .default(Text("OK")) {
+               viewModel.showingErrorAlert = false
+               viewModel.showingAlert = false
+           })
+        : Alert(
+            title: Text("Execute \(viewModel.operation.type.rawValue) transaction"),
+            message: Text("Once done, this can't be undone!"),
+            primaryButton: .cancel( Text("Cancel"), action: {
+                viewModel.showingAlert = false
+            }),
+            secondaryButton: .default(Text("OK"), action: {
+                viewModel.showingAlert = false
+                input.send(.willExecuteTransaction)
+            })
+        )
+    }
     
-    private func checkFocus() {
+    func checkFocus() {
         switch focusedField {
         case .key:
             focusedField = .value
@@ -137,6 +146,8 @@ struct TransactionView: View, ViewProtocol {
         }
     }
 }
+
+
 
 
 struct ContentView_Previews: PreviewProvider {
