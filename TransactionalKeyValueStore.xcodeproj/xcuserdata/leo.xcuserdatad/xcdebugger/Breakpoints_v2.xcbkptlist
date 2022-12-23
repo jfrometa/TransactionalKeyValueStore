@@ -18,5 +18,274 @@
             endingLineNumber = "18">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "97CE204F-53F2-47CE-B422-D94D820A2A3F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStore/Entities/TransactionalKeyValue.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "TransactionalKeyValue"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6285248A-A8A5-4B31-9D59-819C9CDE4B4B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStore/Entities/Transaction.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA21CFFB-37E6-411F-A986-A0B60C32E0EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStore/Entities/Transaction.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "75174CD9-3445-4D7C-976C-61BF5189C067"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStore/Entities/Transaction.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04CAD403-ABAE-491A-BEF7-2128D159D32A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "testExecuteCommand()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "04CAD403-ABAE-491A-BEF7-2128D159D32A - 55ec8b2dde7ac82c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TransactionalKeyValueStore.TrasactionsViewModel.Output) -&gt; () in TransactionalKeyValueStoreTests.TransactionalKeyValueStoreTests.testExecuteCommand() -&gt; ()"
+                  moduleName = "TransactionalKeyValueStoreTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leo/Desktop/Swift/TransactionalKeyValueStore/TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "544">
+               </Location>
+               <Location
+                  uuid = "04CAD403-ABAE-491A-BEF7-2128D159D32A - 55ec8b2dde7ac84d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TransactionalKeyValueStore.TrasactionsViewModel.Output) -&gt; () in TransactionalKeyValueStoreTests.TransactionalKeyValueStoreTests.testExecuteCommand() -&gt; ()"
+                  moduleName = "TransactionalKeyValueStoreTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leo/Desktop/Swift/TransactionalKeyValueStore/TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "04CAD403-ABAE-491A-BEF7-2128D159D32A - 55ec8b2dde7ac84d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TransactionalKeyValueStore.TrasactionsViewModel.Output) -&gt; () in TransactionalKeyValueStoreTests.TransactionalKeyValueStoreTests.testExecuteCommand() -&gt; ()"
+                  moduleName = "TransactionalKeyValueStoreTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leo/Desktop/Swift/TransactionalKeyValueStore/TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1132">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9146DF14-0429-43C4-8429-3CD9B7CFAB66"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "testExecuteCommand()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9146DF14-0429-43C4-8429-3CD9B7CFAB66 - 55ec8b2dde7ac8d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TransactionalKeyValueStore.TrasactionsViewModel.Output) -&gt; () in TransactionalKeyValueStoreTests.TransactionalKeyValueStoreTests.testExecuteCommand() -&gt; ()"
+                  moduleName = "TransactionalKeyValueStoreTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leo/Desktop/Swift/TransactionalKeyValueStore/TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "9146DF14-0429-43C4-8429-3CD9B7CFAB66 - 55ec8b2dde7ac8d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TransactionalKeyValueStore.TrasactionsViewModel.Output) -&gt; () in TransactionalKeyValueStoreTests.TransactionalKeyValueStoreTests.testExecuteCommand() -&gt; ()"
+                  moduleName = "TransactionalKeyValueStoreTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leo/Desktop/Swift/TransactionalKeyValueStore/TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "9146DF14-0429-43C4-8429-3CD9B7CFAB66 - 55ec8b2dde7ac8d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TransactionalKeyValueStore.TrasactionsViewModel.Output) -&gt; () in TransactionalKeyValueStoreTests.TransactionalKeyValueStoreTests.testExecuteCommand() -&gt; ()"
+                  moduleName = "TransactionalKeyValueStoreTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leo/Desktop/Swift/TransactionalKeyValueStore/TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "9146DF14-0429-43C4-8429-3CD9B7CFAB66 - 55ec8b2dde7ac8d2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (TransactionalKeyValueStore.TrasactionsViewModel.Output) -&gt; () in TransactionalKeyValueStoreTests.TransactionalKeyValueStoreTests.testExecuteCommand() -&gt; ()"
+                  moduleName = "TransactionalKeyValueStoreTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/leo/Desktop/Swift/TransactionalKeyValueStore/TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "252">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "01A70FF0-EAFD-4DD2-B710-C578151B785E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "testExecuteCommand()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "219BB523-2044-4ADA-A801-DD1814ADDFB1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStore/UI/Transactions/TransactionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3976D27B-AA50-496D-A41A-F456E3E9FFF0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStore/UI/Transactions/TransactionView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init(viewModel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC8F41EF-6BCC-433F-8410-3586087E40D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TransactionalKeyValueStoreTests/TransactionalKeyValueStoreTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "testNestedTransactions()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
